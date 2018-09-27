@@ -1,0 +1,32 @@
+{
+  "name": "jsclass-map",
+  "version": "0.1.0",
+  "description": "Simple map class.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "doc": "documentation build index.js -f html -o doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kojiy7214/jsclass-map.git"
+  },
+  "keywords": [
+    "javascript",
+    "es6",
+    "map"
+  ],
+  "author": "Koji Yamashita <koji7214@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kojiy7214/jsclass-map/issues"
+  },
+  "homepage": "https://github.com/kojiy7214/jsclass-map#readme",
+  "devDependencies": {
+    "documentation": "^8.1.2",
+    "mocha": "^5.2.0"
+  }
+}
