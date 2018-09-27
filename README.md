@@ -11,10 +11,10 @@ Just create a object, using class exported by the module.
 For more information, please visit GitHub for complete api documentation, under
 "doc" folder.
 ```
-let Map  = requires("jsclass-map");
+const Map  = require("jsclass-map");
 
 let map = new Map();
 
 map.set("k1", 1);
-map.get("k1");
+let val = map.get("k1");
 ```
