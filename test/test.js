@@ -251,4 +251,13 @@ describe('Map', function() {
       assert.equal(diff_map.has("k4"), true);
     })
   })
+
+  describe('Chaiin Methods', function() {
+    it('#chainable_methods()', function() {
+      new Map().set("k1", 1).clear().setAll([{
+        "key": "k2",
+        "value": 2
+      }]).remove("k2").and(new Map()).or(new Map()).xor(new Map());
+    })
+  })
 })

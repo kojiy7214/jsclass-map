@@ -1,6 +1,6 @@
 {
   "name": "jsclass-map",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple map class.",
   "main": "index.js",
   "directories": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "doc": "documentation build index.js -f html -o doc"
+    "doc": "documentation build index.js -f md -o API.md & "
   },
   "repository": {
     "type": "git",

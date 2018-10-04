@@ -30,9 +30,11 @@ module.exports =
     /**
      * Remove all elements.
      * @method clear
+     * @return {Map} This Map
      */
     clear() {
       this._data = {};
+      return this;
     }
 
     /**
@@ -60,9 +62,11 @@ module.exports =
      * @method set
      * @param  {any} key Key of the element to set.
      * @param  {any} val Value of th element to set.
+     * @return {Map} This Map
      */
     set(key, val) {
       this._data[key] = val;
+      return this;
     }
 
     /**
@@ -70,11 +74,13 @@ module.exports =
      * should have "key" and "value" as property.
      * @method setAll
      * @param  {iterator} it Iteratable object with valid elements.
+     * @return {Map} This Map
      */
     setAll(it) {
       for (let elem of it) {
         this.set(elem.key, elem.value);
       }
+      return this;
     }
 
     /**
@@ -92,10 +98,12 @@ module.exports =
      * Remove element, with given key.  If key is not present in map,
      * then nothing happens.
      * @method remove
-     * @param  {[type]} key Key of an element to remove.
+     * @param  {any} key Key of an element to remove.
+     * @return {Map} This Map
      */
     remove(key) {
       delete this._data[key];
+      return this;
     }
 
     /**
