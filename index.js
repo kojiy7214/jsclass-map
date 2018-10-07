@@ -1,13 +1,12 @@
-module.exports =
-
   /**
-   * imple map es6 class, which works as an iterator itself.
-   * @class {Map}
+   * @class Map
    */
   class Map {
     /**
-     * Simple map es6 class, which works as an iterator itself.
+     * Creates map object.  You may pass itereator to initialize map at creation.
+     * Iterator should contain objects with "key" and "value" property.
      * @param {Iterator} it
+     * @memberof Map
      */
     constructor(it) {
       this._data = {};
@@ -31,6 +30,8 @@ module.exports =
      * Remove all elements.
      * @method clear
      * @return {Map} This Map
+     * @memberof Map
+     * @instance
      */
     clear() {
       this._data = {};
@@ -41,6 +42,8 @@ module.exports =
      * Check if the map has no element.
      * @method isEmpty
      * @return {Boolean} If map has no element, then true.
+     * @memberof Map
+     * @instance
      */
     isEmpty() {
       return this.keys().length == 0;
@@ -63,6 +66,8 @@ module.exports =
      * @param  {any} key Key of the element to set.
      * @param  {any} val Value of th element to set.
      * @return {Map} This Map
+     * @memberof Map
+     * @instance
      */
     set(key, val) {
       this._data[key] = val;
@@ -75,6 +80,8 @@ module.exports =
      * @method setAll
      * @param  {iterator} it Iteratable object with valid elements.
      * @return {Map} This Map
+     * @memberof Map
+     * @instance
      */
     setAll(it) {
       for (let elem of it) {
@@ -89,6 +96,8 @@ module.exports =
      * @method get
      * @param  {any} key Key of an element tobe located.
      * @return {any}     Associated value.
+     * @memberof Map
+     * @instance
      */
     get(key) {
       return this._data[key];
@@ -100,6 +109,8 @@ module.exports =
      * @method remove
      * @param  {any} key Key of an element to remove.
      * @return {Map} This Map
+     * @memberof Map
+     * @instance
      */
     remove(key) {
       delete this._data[key];
@@ -111,6 +122,8 @@ module.exports =
      * @method has
      * @param  {any}  key Key to check.
      * @return {Boolean}     If present, then true.
+     * @memberof Map
+     * @instance
      */
     has(key) {
       return key in this._data;
@@ -121,6 +134,8 @@ module.exports =
      * @method hasValue
      * @param  {any}  v value to check.
      * @return {Boolean}     If present, then true.
+     * @memberof Map
+     * @instance
      */
     hasValue(val) {
       for (let elem of this) {
@@ -135,6 +150,8 @@ module.exports =
      * Returns an array of key, contains in map.
      * @method keys
      * @return {Array} Array of keys.
+     * @memberof Map
+     * @instance
      */
     keys() {
       return Object.keys(this._data);
@@ -146,6 +163,8 @@ module.exports =
      * @method or
      * @param  {Map} map Map to operate.
      * @return {Map}     Result map.
+     * @memberof Map
+     * @instance
      */
     or(map) {
       let retval = new Map(this);
@@ -160,6 +179,8 @@ module.exports =
      * @method and
      * @param  {Map} map Map to operate.
      * @return {Map}     Result map.
+     * @memberof Map
+     * @instance
      */
     and(map) {
       let source = (this.size < map.size) ? this : map;
@@ -180,6 +201,8 @@ module.exports =
      * @method xor
      * @param  {Map} map Map to operate.
      * @return {Map}     Result map.
+     * @memberof Map
+     * @instance
      */
     xor(map) {
       let source = (this.size < map.size) ? this : map;
@@ -201,6 +224,8 @@ module.exports =
      * @method diffVal
      * @param  {Map} map Map to compare.
      * @return {Map}     Result map.
+     * @memberof Map
+     * @instance
      */
     diffVal(map) {
       let source = (this.size < map.size) ? this : map;
@@ -215,3 +240,9 @@ module.exports =
       return retval;
     }
   }
+
+  /**
+   * Simple map class, which support logical operator.
+   * @module jsclass-map
+   */
+  module.exports = Map;
