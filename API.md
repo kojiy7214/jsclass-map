@@ -16,8 +16,9 @@
 ## Functions
 
 <dl>
-<dt><a href="#size">size()</a> ⇒ <code>Number</code></dt>
-<dd><p>Count elements in map.</p>
+<dt><a href="#constructor">constructor(it)</a></dt>
+<dd><p>Creates map object.  You may pass itereator to initialize map at creation.
+Iterator should contain objects with &quot;key&quot; and &quot;value&quot; property.</p>
 </dd>
 </dl>
 
@@ -32,23 +33,20 @@ Simple map class, which support logical operator.
 **Kind**: global class  
 
 * [Map](#Map)
-    * _instance_
-        * [.clear()](#Map+clear) ⇒ [<code>Map</code>](#Map)
-        * [.isEmpty()](#Map+isEmpty) ⇒ <code>Boolean</code>
-        * [.set(key, val)](#Map+set) ⇒ [<code>Map</code>](#Map)
-        * [.setAll(it)](#Map+setAll) ⇒ [<code>Map</code>](#Map)
-        * [.get(key)](#Map+get) ⇒ <code>any</code>
-        * [.remove(key)](#Map+remove) ⇒ [<code>Map</code>](#Map)
-        * [.has(key)](#Map+has) ⇒ <code>Boolean</code>
-        * [.hasValue(v)](#Map+hasValue) ⇒ <code>Boolean</code>
-        * [.keys()](#Map+keys) ⇒ <code>Array</code>
-        * [.or(map)](#Map+or) ⇒ [<code>Map</code>](#Map)
-        * [.and(map)](#Map+and) ⇒ [<code>Map</code>](#Map)
-        * [.xor(map)](#Map+xor) ⇒ [<code>Map</code>](#Map)
-        * [.diffVal(map)](#Map+diffVal) ⇒ [<code>Map</code>](#Map)
-    * _static_
-        * [.Map](#Map.Map)
-            * [new Map(it)](#new_Map.Map_new)
+    * [.clear()](#Map+clear) ⇒ [<code>Map</code>](#Map)
+    * [.isEmpty()](#Map+isEmpty) ⇒ <code>Boolean</code>
+    * [.size()](#Map+size) ⇒ <code>Number</code>
+    * [.set(key, val)](#Map+set) ⇒ [<code>Map</code>](#Map)
+    * [.setAll(it)](#Map+setAll) ⇒ [<code>Map</code>](#Map)
+    * [.get(key)](#Map+get) ⇒ <code>any</code>
+    * [.remove(key)](#Map+remove) ⇒ [<code>Map</code>](#Map)
+    * [.has(key)](#Map+has) ⇒ <code>Boolean</code>
+    * [.hasValue(v)](#Map+hasValue) ⇒ <code>Boolean</code>
+    * [.keys()](#Map+keys) ⇒ <code>Array</code>
+    * [.or(map)](#Map+or) ⇒ [<code>Map</code>](#Map)
+    * [.and(map)](#Map+and) ⇒ [<code>Map</code>](#Map)
+    * [.xor(map)](#Map+xor) ⇒ [<code>Map</code>](#Map)
+    * [.diffVal(map)](#Map+diffVal) ⇒ [<code>Map</code>](#Map)
 
 <a name="Map+clear"></a>
 
@@ -64,6 +62,13 @@ Check if the map has no element.
 
 **Kind**: instance method of [<code>Map</code>](#Map)  
 **Returns**: <code>Boolean</code> - If map has no element, then true.  
+<a name="Map+size"></a>
+
+### map.size() ⇒ <code>Number</code>
+Count elements in map.
+
+**Kind**: instance method of [<code>Map</code>](#Map)  
+**Returns**: <code>Number</code> - Count of elements in map.  
 <a name="Map+set"></a>
 
 ### map.set(key, val) ⇒ [<code>Map</code>](#Map)
@@ -201,25 +206,15 @@ Extract elements between twu maps, which have common key but different values.
 | --- | --- | --- |
 | map | [<code>Map</code>](#Map) | Map to compare. |
 
-<a name="Map.Map"></a>
+<a name="constructor"></a>
 
-### Map.Map
-**Kind**: static class of [<code>Map</code>](#Map)  
-<a name="new_Map.Map_new"></a>
-
-#### new Map(it)
+## constructor(it)
 Creates map object.  You may pass itereator to initialize map at creation.
 Iterator should contain objects with "key" and "value" property.
 
+**Kind**: global function  
 
 | Param | Type |
 | --- | --- |
-| it | <code>Iterator</code> |
+| it | <code>Iterator</code> | 
 
-<a name="size"></a>
-
-## size() ⇒ <code>Number</code>
-Count elements in map.
-
-**Kind**: global function  
-**Returns**: <code>Number</code> - Count of elements in map.  

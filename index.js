@@ -5,8 +5,8 @@
     /**
      * Creates map object.  You may pass itereator to initialize map at creation.
      * Iterator should contain objects with "key" and "value" property.
+     * @method constructor
      * @param {Iterator} it
-     * @memberof Map
      */
     constructor(it) {
       this._data = {};
@@ -53,6 +53,8 @@
      * Count elements in map.
      * @method size
      * @return {Number} Count of elements in map.
+     * @memberof Map
+     * @instance
      */
     size() {
       return this.keys().length;
