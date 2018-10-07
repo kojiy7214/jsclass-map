@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kojiy7214/jsclass-map.svg?branch=master)](https://travis-ci.org/kojiy7214/jsclass-map)
+
 # jsclass-map
 Simple map class for general purpose.
 
